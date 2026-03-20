@@ -1,31 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Blog de Tecnologia</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #f5f5f0;
+      color: #222;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    main {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    article {
+      background: #fff;
+      border-radius: 6px;
+      padding: 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    article h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #1a1a2e;
+    }
+
+    article time {
+      font-size: 0.82rem;
+      color: #888;
+      font-family: Arial, sans-serif;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    article p {
+      line-height: 1.75;
+      color: #444;
+    }
+
+    aside {
+      flex: 1;
+    }
+
+    aside section {
+      background: #fff;
+      border-radius: 6px;
+      padding: 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+
+    aside h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      color: #1a1a2e;
+      font-family: Arial, sans-serif;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    aside ul li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 22px 40px;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
-    <div id="cabecalho">
-        <div class="logo">Engenharia de Computação 2026</div>
-        <div class="menu">
-            <a href="#">Home</a> | <a href="#">Aulas</a>
-        </div>
-    </div>
 
-    <div id="conteudo-principal">
-        <div class="postagem">
-            <div class="titulo-post">Introdução ao Desenvolvimento Web</div>
-            <p>Este é um texto de exemplo que precisa de estrutura.</p>
-        </div>
-    </div>
+  <header>
+    <h1>Meu Blog</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
-    <div id="barra-lateral">
-        <p>Links úteis e Categorias.</p>
-    </div>
+  <div class="container">
+    <main>
+      <article>
+        <h2>Introdução à Semântica HTML5</h2>
+        <time datetime="2025-06-01">20 de março de 2026</time>
+        <p>
+          A semântica HTML5 torna o código mais legível para humanos e máquinas. 
+          Tags como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> e 
+          <code>&lt;nav&gt;</code> comunicam o propósito do conteúdo diretamente 
+          no markup, melhorando acessibilidade e SEO.
+        </p>
+      </article>
 
-    <div id="rodape">
-        <p>&copy; 2026 - Aula de HTML Semântico</p>
-    </div>
+      <article>
+        <h2>Por que Acessibilidade Importa</h2>
+        <time datetime="2025-06-08">8 de junho de 2025</time>
+        <p>
+          Leitores de ecrã dependem de uma estrutura semântica correta para navegar 
+          pelo conteúdo. Usar as tags certas não é apenas boa prática — é uma 
+          responsabilidade para com todos os utilizadores da web.
+        </p>
+      </article>
+
+      <article>
+        <h2>SEO e Estrutura de Títulos</h2>
+        <time datetime="2025-06-15">15 de junho de 2025</time>
+        <p>
+          Motores de busca utilizam a hierarquia de títulos (<code>&lt;h1&gt;</code> 
+          a <code>&lt;h6&gt;</code>) para entender a estrutura do conteúdo. 
+          Um único <code>&lt;h1&gt;</code> por página e subtítulos bem organizados 
+          fazem toda a diferença no ranking.
+        </p>
+      </article>
+    </main>
+
+    <aside>
+      <section>
+        <h3>Categorias</h3>
+        <ul>
+          <li>HTML &amp; CSS</li>
+          <li>Acessibilidade</li>
+          <li>SEO</li>
+          <li>Boas Práticas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Posts Recentes</h3>
+        <ul>
+          <li>Semântica HTML5</li>
+          <li>Por que Acessibilidade Importa</li>
+          <li>SEO e Títulos</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Meu Blog. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
